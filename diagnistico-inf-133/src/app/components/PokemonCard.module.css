@@ -1,0 +1,124 @@
+.maincontainer{
+    background-color: var(--sky);
+    height: auto;
+    width: 375px;
+}
+
+.titles{
+    display: flex;
+    flex-direction: column;
+    padding: 25px 20px 25px 20px;
+    gap: 40px;
+}
+
+.subtitle{
+    color: var(--black);
+    font-size: var(--lg);
+    font-weight: bold;
+}
+
+.maintitle{
+    color: var(--blue);
+    font-size: var(--xl);
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.pokeimage{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+.pokeimage img{
+    height: 200px;
+    
+}
+
+/*margin: -50px 0 -50px 0;*/
+
+.id{
+    font-size: var(--md);
+    color: var(--ocean);
+    font-weight: bold;
+}
+
+.pokeimage figure{
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.pokeinfo{
+    height: auto;
+    background-color: white;
+    border-radius: 40px 40px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px;
+    padding-bottom: 40px;
+}
+
+.horizontal{
+    background-color: var(--blue);
+    width: 43px;
+    height: 2px;
+    border-radius: 50px;
+}
+
+.stat{
+    color: var(--black);
+    font-weight: bold;
+    font-size: var(--md);
+    text-transform: capitalize;
+}
+
+.linecontainer{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.infoline{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 15px;
+}
+
+.parameter{
+    color: var(--gray);
+    font-size: var(--sm);
+    text-transform: capitalize;
+}
+
+.value{
+    color: var(--black);
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: var(--sm);
+}
+
+.valuet{
+    color: var(--black);
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: var(--sm);
+}
+
+.valuet::after{
+    content: ',';
+}
+
+.valuet:last-child::after{
+    content: none;
+}
+
+.items{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 3px;
+}
