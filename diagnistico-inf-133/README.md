@@ -28,7 +28,7 @@ git remote add origin <REMOTE_URL>
 
 | Nombres        |      Apellidos |      CI |
 |----------------|----------------|----------------|
-|  `<Nombres> `  | `<Apellidos> ` | `<Carnet de identidad> ` |
+|  `Howard Brian`  | `Anti Apaza` | `7062816` |
 ### Contexto:
 
 Estás postulando para un puesto de desarrollador **Front-end** en una empresa que trabaja con clientes internacionales. Para poner a prueba tus habilidades te han pedido construir una aplicación web que permita visualizar un catalogo de **Pokemons**. Para esto te han proporcionado la documentación de la API de Pokemon para obtener los datos que debe consumir tu aplicación y te han proporcionado el **diseño de UI/UX del componente para ver cada Pokemon** [Figma](https://cutt.ly/YwL1XB9s) que debe cumplir tu aplicación.
