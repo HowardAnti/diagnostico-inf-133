@@ -13,7 +13,7 @@ function PokemonList({number}){
         fetch(url).then(res=>res.json()).then(data=>{
             setPokemons(data.results);
         })
-    },[])
+    },[number])
 
 
 
@@ -24,6 +24,9 @@ function PokemonList({number}){
                     return(
                         <PokemonCard key={index} pokenumber={pokemon.name} />
                     )
+                }
+                else{
+                    return null;
                 }
             })}
         </div>

@@ -6,7 +6,7 @@ import PokemonList from "./components/PokemonList";
 export default function Home() {
   return (
     <main className={styles.main}>
-      <PokemonList number={5} />
+      <PokemonList number={6} />
     </main>
   );
 }

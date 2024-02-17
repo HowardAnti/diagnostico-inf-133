@@ -1,5 +1,13 @@
 .maincontainer{
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
     gap: 10px;
 }
+
+/*@media(max-width:760px){
+    .maincontainer{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+    }
+}*/

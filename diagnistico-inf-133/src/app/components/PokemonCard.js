@@ -13,11 +13,11 @@ function PokemonCard({pokenumber}){
     const [poketypes,setPoketypes]=useState([]);
     const [pokeabilities,setPokeabilities]=useState([]);
 
-
     useEffect(()=>{
         fetch(url).then(res=>res.json()).then(data=>{
+            
             setPokemon(
-                {id: data.id, name:data.name, image:data.sprites.other.dream_world.front_default}
+                {id: String(data.id).padStart(3,'0'), name:data.name, image:data.sprites.front_default}
             ),
             setPokeabouts([
                 {parameter: "height", value: data.height/10+" m"},
@@ -27,7 +27,9 @@ function PokemonCard({pokenumber}){
             setPoketypes(data.types),
             setPokeabilities(data.abilities)
         })
-    })
+    },[pokenumber]);
+
+
 
     return(
         <div className={styles.maincontainer} >
@@ -77,13 +79,18 @@ function PokemonCard({pokenumber}){
                 <span className={styles.stat} >Stats</span>
                 <div className={styles.linecontainer} >
                     {pokestats.map((pokestat,index)=>{
-                        return(
-                            <div key={index} className={styles.infoline} >
-                                <span className={styles.parameter} >{pokestat.stat.name}</span>
-                                <span className={styles.value} >{pokestat.base_stat}</span>
-                            </div>
-                            
-                        )
+                        if(pokestat.stat.name!=="special-attack"&&pokestat.stat.name!=="special-defense"){
+                            return(
+                                <div key={index} className={styles.infoline} >
+                                    <span className={styles.parameter} >{pokestat.stat.name}</span>
+                                    <span className={styles.value} >{pokestat.base_stat}</span>
+                                </div>
+                                
+                            )
+                        }
+                        else{
+                            return null;
+                        }
                     })}
                 </div>
             </div>

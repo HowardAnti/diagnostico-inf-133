@@ -31,8 +31,11 @@
     padding: 20px;
 }
 
+
 .pokeimage img{
-    height: 200px;
+    height: 250px;
+    object-fit: contain;
+    margin: -50px 0 -50px 0;
     
 }
 
